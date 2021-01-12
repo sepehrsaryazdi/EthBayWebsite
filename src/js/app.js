@@ -153,9 +153,9 @@ App = {
         // refresh account information because the balance may have changed
         App.displayAccountInfo();
         const ethBayInstance = await App.contracts.EthBay.deployed();
-
+console.log(window.location.pathname);
         if(window.location.pathname == "/myassets.html") {
-          console.log(window.location.pathname);
+
           const assetIds = await ethBayInstance.loadMyAssets({from: App.account});
           $('#assetsRowMyAssets').empty();
           for(let i = 0; i < assetIds.length; i++) {
