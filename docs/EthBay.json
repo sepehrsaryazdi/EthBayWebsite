@@ -13534,8 +13534,71 @@
         }
       },
       "links": {},
-      "address": "0xEC1eD1B940AC3BB4ef8aec893e69aE50dCa96AD6",
-      "transactionHash": "0x2c259868b6f96994b4530725b68b4888a18936c5ba1d2282729ca0d5c3fe035b"
+      "address": "0x0EE4540CC3053EC638A925837Bb6Ff60758D55d0",
+      "transactionHash": "0x04e96f7192707f4382bba75bd6149ae33ccf9b3f5eeb2a60950b650089c02647"
+    },
+    "5777": {
+      "events": {
+        "0x538ae47a1c93f9d025694e99acb58c29161a3cd82ebb39721ba64c2954132d06": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_seller",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogListAsset",
+          "type": "event"
+        },
+        "0x5ef375089d5c765027ad841545b17f1696831c60344e8dd2f2a4653768c04285": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_seller",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_buyer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogPurchaseAsset",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xD6e0845B18cD0Acf87566Cc607f9af19f3746D55",
+      "transactionHash": "0x63e257293d7edd7fc909627f7fdc9b38c34b14a995bdd916bb6c0473880416bd"
     },
     "5778": {
       "events": {
@@ -13602,7 +13665,7 @@
     }
   },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-01-11T23:08:45.332Z",
+  "updatedAt": "2021-01-12T07:03:46.751Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
