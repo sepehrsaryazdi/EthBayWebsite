@@ -153,15 +153,16 @@ App = {
         App.displayAccountInfo();
         const ethBayInstance = await App.contracts.EthBay.deployed();
         if (window.location.pathname == "/index.html"){
-          const assetIds = await ethBayInstance.loadAllAssets();
+          const assetIds = await ethBayInstance.loadAllAssets({from: App.account});
           $('#assetsRowIndex').empty();
           for(let i = 0; i < assetIds.length; i++) {
               const asset = await ethBayInstance.viewListing(i);
+              console.log("Yes")
               App.displayAssetIndex(asset[0], asset[1], asset[2], asset[3], asset[4], asset[5], asset[6]);
           }
           App.loading = false;
         } else {
-          const assetIds = await ethBayInstance.loadMyAssets();
+          const assetIds = await ethBayInstance.loadMyAssets({from: App.account});
           $('#assetsRowMyAssets').empty();
           for(let i = 0; i < assetIds.length; i++) {
               const asset = await ethBayInstance.viewListing(i);
@@ -216,7 +217,7 @@ App = {
 
         // add this new asset
         assetsRow.append(assetTemplate.html());
-        console.log(assetTemplate.html());
+
     },
 
 
