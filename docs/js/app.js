@@ -153,7 +153,7 @@ App = {
         App.displayAccountInfo();
         const ethBayInstance = await App.contracts.EthBay.deployed();
         if (window.location.pathname == "/index.html"){
-          const assetIds = await ethBayInstance.loadAllAssets({from: App.account});
+          const assetIds = await ethBayInstance.loadMyAssets({from: App.account});
           $('#assetsRowIndex').empty();
           for(let i = 0; i < assetIds.length; i++) {
               const asset = await ethBayInstance.viewListing(i);
