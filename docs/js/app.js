@@ -165,6 +165,7 @@ App = {
           $('#assetsRowMyAssets').empty();
           for(let i = 0; i < assetIds.length; i++) {
               const asset = await ethBayInstance.viewListing(i);
+              console.log("");
               App.displayAssetMyAssets(asset[0], asset[1], asset[2], asset[3], asset[4], asset[5], asset[6]);
           }
           App.loading = false;
